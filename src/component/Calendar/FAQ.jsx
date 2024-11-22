@@ -10,41 +10,41 @@ export default function FAQ() {
 
       <div class="collapse collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+  <div class="collapse-title text-xl font-medium">What is the purpose of this application?</div>
   <div class="collapse-content">
-    <p>hello</p>
+    <p>This application is designed to help users find and collect discount coupons and voucher codes from various e-commerce stores in Bangladesh. It provides an easy and convenient way to browse, copy, and use these coupons to save money while shopping online.</p>
   </div>
 </div>
 <div class="collapse collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" />
-  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+  <div class="collapse-title text-xl font-medium">How can I sign up and log in to the application?</div>
   <div class="collapse-content">
-    <p>hello</p>
+    <p>Users can sign up or log in using their email address and password. Alternatively, you can log in using your Google account through Firebase Authentication for a faster and secure experience.</p>
   </div>
 </div>
 <div class="collapse collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" />
-  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+  <div class="collapse-title text-xl font-medium">What types of coupons are available in this application?</div>
   <div class="collapse-content">
-    <p>hello</p>
-  </div>
-</div>
-
-
-<div class="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" />
-  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-  <div class="collapse-content">
-    <p>hello</p>
+    <p>The application provides coupons for a variety of e-commerce stores in Bangladesh. These include discounts on products, cashback offers, free shipping deals, and more. Each coupon includes details such as the discount amount, expiry date, and applicable product categories.</p>
   </div>
 </div>
 
 
 <div class="collapse collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" />
-  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+  <div class="collapse-title text-xl font-medium">Are the coupons updated regularly?</div>
   <div class="collapse-content">
-    <p>hello</p>
+    <p>Yes, the application is updated regularly to ensure that users have access to the latest coupons and offers. Expired or invalid coupons are removed, and new coupons are added as soon as they become available.</p>
+  </div>
+</div>
+
+
+<div class="collapse collapse-arrow bg-base-200">
+  <input type="radio" name="my-accordion-2" />
+  <div class="collapse-title text-xl font-medium">How can I use the coupons found in this application?</div>
+  <div class="collapse-content">
+    <p>To use a coupon, simply browse the available options, click on a coupon to view its details, and copy the coupon code with one click. Then, paste the code at checkout on the respective e-commerce store's website to avail the discount.</p>
   </div>
 </div>
 

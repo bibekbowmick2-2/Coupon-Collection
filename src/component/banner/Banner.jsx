@@ -1,19 +1,37 @@
 import banner from "../../../assets/banner.jpg";
-
+import React,{ useContext } from 'react'
+import { AppContext } from '../contextapi/AppProvider';
+import 'animate.css';
 const Banner = () => {
+  const { user } = useContext(AppContext);
+  // if (!user  ) {
+  //   return (
+  //     <div className="flex items-center justify-center h-screen">
+  //     <span class="loading loading-spinner loading-lg"></span>
+  //       <p>Loading...</p>
+  //     </div>
+  //   );
+  // }
   return (
-    <div className="relative  bg-white h-[650px] lg:h-[794px] px-5">
+    <div className="relative  bg-white h-[800px] lg:h-[794px] px-5">
       <div className="hero bg-slate-700 text-white p-5 lg:px-36 rounded-b-lg h-[500px] lg:h-[694px]">
         <div className="hero-content text-center">
           <div className="max-w-xs lg:max-w-4xl lg:max-h-[500px] absolute top-3 lg:top-10 space-y-1">
             <div class="avatar">
-              <div class="w-24 rounded-full">
-                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              <div class="w-32 rounded-full">
+              
+                <p>You can put your image</p>
+              
+                
               </div>
             </div>
-            <h1 className="text-4xl lg:text-5xl">Hi Bibek, How are you?</h1>
-            <p className="lg:py-6">
-              Your email address: bibek@gmail.com <br /> the coolest coupons, we
+
+             
+                
+              
+            <h1 className="text-4xl lg:text-5xl animate__animated animate__heartBeat animate__delay-1s animate__duration-8s">Hi , How are you?</h1>
+            <p className="lg:py-6 animate__flipOutY animate__delay-5s animate__duration-8s">
+               <br /> the coolest coupons, we
               have it all!
             </p>
           </div>
@@ -27,11 +45,11 @@ const Banner = () => {
         /> */}
 
         
-        <div class="carousel w-full">
+        <div class="carousel w-full ">
   <div id="item1" class="carousel-item w-full">
     <img
       src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
+      class="w-full " />
   </div>
   <div id="item2" class="carousel-item w-full">
     <img

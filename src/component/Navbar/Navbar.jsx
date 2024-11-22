@@ -3,11 +3,28 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
 import { useContext } from "react";
 import { AppContext } from "../contextapi/AppProvider";
-import myImage4 from '../../../assets/download32.png';
+import myImage4 from "../../../assets/download32.png";
+
+
+import { auth } from '../../firebase/firebase';
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
-  const { additem } = useContext(AppContext);
-  console.log(additem);
+  const { additem, user } = useContext(AppContext);
+ 
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    signOut(auth)
+        .then(() => {
+            toast.success('Sign-out successful.');
+            navigate("/login"); // Navigate to login after sign-out
+        })
+        .catch((error) => {
+            console.error('An error occurred during sign-out:', error);
+        });
+};
   const Link = (
     <>
       <div className="lg:flex lg:gap-12">
@@ -24,7 +41,7 @@ const Navbar = () => {
 
         <div className="text-lime-400">
           <NavLink
-            to="/statistic"
+            to="/brands"
             className={({ isActive }) =>
               isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
             }
@@ -36,7 +53,7 @@ const Navbar = () => {
         <div className="text-lime-400">
           {" "}
           <NavLink
-            to="/dashBoard/cart"
+            to="/profile"
             className={({ isActive }) =>
               isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
             }
@@ -44,10 +61,6 @@ const Navbar = () => {
             My Profile
           </NavLink>
         </div>
-
-
-
-
 
         <div className="text-lime-400">
           {" "}
@@ -60,8 +73,6 @@ const Navbar = () => {
             Calendar
           </NavLink>
         </div>
-
-
 
         <div className="text-lime-400">
           {" "}
@@ -121,41 +132,48 @@ const Navbar = () => {
           {/* <a className="rounded-full mr-3 bg-white text-black p-3 relative"><AiOutlineShoppingCart /><span className='absolute bottom-4 left-6'>{additem.length}</span></a>
                     <a className="rounded-full  bg-white text-black p-3"><FaRegHeart /></a> */}
 
-          <div className="lg:flex lg:gap-4">
-            
-
-            <div className="text-lime-400">
-              <NavLink
-                to="/login"
-                className={({ isActive }) =>
-                  isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
-                }
-              >
-                Login 
-              </NavLink>
+          {user ? (
+            <div className="lg:flex lg:gap-4">
+              <div className="text-lime-400 mt-20  lg:mt-0">
+                <NavLink
+                  to="/logout"
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent direct navigation
+                    handleLogout();
+                  }}
+                  className={({ isActive }) =>
+                    isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
+                  }
+                >
+                  Logout
+                </NavLink>
+              </div>
             </div>
+          ) : (
+            <div className="lg:flex lg:gap-4">
+              <div className="text-lime-400 mt-20 md:mr-24 lg:mt-0">
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) =>
+                    isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
+                  }
+                >
+                  Login
+                </NavLink>
+              </div>
 
-
-
-
-            <div className="text-lime-400">
-              <NavLink
-                to="/register"
-                className={({ isActive }) =>
-                  isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
-                }
-              >
-                Registration 
-              </NavLink>
+              <div className="text-lime-400">
+                <NavLink
+                  to="/register"
+                  className={({ isActive }) =>
+                    isActive ? "bg-zinc-950 p-1 lg:p-5 rounded-md" : ""
+                  }
+                >
+                  Registration
+                </NavLink>
+              </div>
             </div>
-
-
-          </div>
-
-
-
-
-          
+          )}
         </div>
       </div>
     </div>

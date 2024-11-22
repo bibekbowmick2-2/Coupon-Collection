@@ -1,29 +1,15 @@
 
 
-# figma link: https://www.figma.com/design/qr7hizhQyfmitEimBC6blK/Assignment-8?node-id=0-1&node-type=canvas&t=7Sr6v8i3wIN015u6-0
-# Project Name: Gadget Heaven
-# Live Site Link: https://sweltering-jeans.surge.sh/
 
-# Project Setup:
-- **First clone or download repository**
-- **In VS Code, open a new terminal**
-- **On terminal run command: npm install**
-- **After it run npm run dev**
-- **You can click the localhost server link to open the project**
-# Fundamental Concepts used:
-- **Context API**
-- **Different hooks**
-- **Own API build**
-- **State Lift**
-- **React Toastify, Router**
-
-### handling and managing data:
-
--  (Context API) 
-
-
-
-
+# Project Name: Discount PRO : A Coupon Collecting Application
+# Project Category: 005
+# Live Site Link: https://numerous-locket.surge.sh/
+# NPM packages used:
+- **animate.css**
+- **firebase**
+- **react-copy-to-clipboard**
+- **react-router-dom**
+- **react-toastify**
 
 
 
@@ -31,21 +17,14 @@
 
 ### 5 Key Features for project
 
-- Wide Range of Products: From laptops and smartphones to smartwatches and accessories, Gadget Heaven offers a diverse selection of the latest gadgets.
 
-- Detailed Product Information: Each product listing includes comprehensive details and pricing, helping you make informed purchasing decisions.
+- Diverse Coupon Categories: The project offers a wide range of coupons across various categories, including e-commerce, technology, retail, and social services.
 
-- User-Friendly Interface: The website is designed to be intuitive and easy to navigate, ensuring a seamless shopping experience.
+- User Profiles: Users can create and manage their profiles, making it easier to track and utilize their favorite coupons.
 
-- Special Offers and Promotions: Gadget Heaven frequently updates its offerings with special deals and promotions, making it easier to find great bargains.
+- Calendar Integration: The project includes a calendar feature to help users keep track of coupon expiration dates and upcoming sales.
 
-- Comprehensive Services: In addition to selling gadgets, the website also provides branding, design, marketing, and advertisement services
+- Brand Partnerships: The project collaborates with well-known brands like Amazon, Microsoft, and Walmart to provide exclusive deals and discounts.
 
-<img src="application-design/Screenshot_18.png"/>
-<img src="application-design/Screenshot_19.png"/>
-<img src="application-design/Screenshot_20.png"/>
-<img src="application-design/Screenshot_21.png"/>
-<img src="application-design/Screenshot_22.png"/>
-<img src="application-design/Screenshot_23.png"/>
-<img src="application-design/Screenshot_24.png"/>
+- Comprehensive Services: In addition to coupon collection, the project also offers branding, design, marketing, and advertisement services.
 

@@ -6,34 +6,34 @@ const Cards = () => {
    
     const[cards, setCards] = useState([]);
     const data = useLoaderData();
-    useEffect(() => {
+    // useEffect(() => {
 
 
        
 
-        if(category && category !== "all" )
-        {
-            const filteredProducts = data.filter(d => d.category === category);
-            setCards(filteredProducts);
-        }
+    //     if(category && category !== "all" )
+    //     {
+    //         const filteredProducts = data.filter(d => d.category === category);
+    //         setCards(filteredProducts);
+    //     }
 
-        else if(category ==undefined || category ==null ) {
+    //     else if(category ==undefined || category ==null ) {
 
-           setCards(data);
+    //        setCards(data);
 
-        }
+    //     }
 
-        else{
-            setCards(data);
-        }
+    //     else{
+    //         setCards(data);
+    //     }
        
-    }, [data,category])
+    // }, [data,category])
     
     return (
         <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
             {
-              cards.map(card => <Card key={card.id} card={card} category={category}></Card>)
+              data.map(card => <Card key={card.id} card={card} ></Card>)
             }
         </div>
         </>

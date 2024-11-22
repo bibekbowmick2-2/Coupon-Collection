@@ -23,6 +23,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
 import FAQ from './component/Calendar/FAQ';
+
+import Profile from './component/Profile/Profile';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import Update from './component/Profile/Update';
+import Reset from './component/Login/Reset';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,7 +46,7 @@ const router = createBrowserRouter([
         
         path:"/",
         element:<Home/>,
-        loader: () => fetch('../categories.json'),
+        loader: ()=> fetch('../Fakedata.json'),
         
         children:[
           {
@@ -86,7 +91,7 @@ const router = createBrowserRouter([
 
 
       {
-        path: "/statistic",
+        path: "/brands",
         element: <Statistics/>,
         loader: ()=> fetch('../Fakedata.json')
       },
@@ -149,7 +154,24 @@ const router = createBrowserRouter([
 
       {
         path: "/login",
-        element: <Login/>
+        element: <Login/> 
+      },
+
+     
+
+
+      
+      {
+        path: "/profile",
+        element:  <PrivateRoute> 
+                   <Profile/> 
+                   </PrivateRoute>
+      },
+
+      {
+        path: "/update",
+        element:<Update/>
+                  
       },
 
 
@@ -157,10 +179,15 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register/>
       },
-
       {
-        path: "/product-details/:id",
-        element: <ProductDetails></ProductDetails>,
+        path: "/reset",
+        element: <Reset/>
+      },
+
+      
+      {
+        path: "/brands/:id",
+        element: <PrivateRoute>  <ProductDetails></ProductDetails> </PrivateRoute>,
         loader: ()=> fetch('../Fakedata.json'),
       }
       
